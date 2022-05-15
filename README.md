@@ -1,6 +1,10 @@
 # Debian
+
 ## Preseed
-https://www.debian.org/releases/stable/example-preseed.txt
+```sh
+curl -o preseed.cfg https://www.debian.org/releases/stable/example-preseed.txt
+```
+
 ## Debian 9
 ```sh
 virt-install \
@@ -14,6 +18,7 @@ virt-install \
   --initrd-inject ./preseed.cfg \
   --extra-args="ks=file:/preseed.cfg"
 ```
+
 ## Debian 11
 ```sh
 virt-install \

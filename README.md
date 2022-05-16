@@ -18,17 +18,3 @@ virt-install \
   --initrd-inject ./preseed.cfg \
   --extra-args="ks=file:/preseed.cfg"
 ```
-
-## Debian 11
-```sh
-virt-install \
-  --name debian11 \
-  --memory 2048 \
-  --vcpus 2 \
-  --disk size=50 \
-  --network=bridge:virbr0 \
-  --location http://ftp.debian.org/debian/dists/bullseye/main/installer-amd64 \
-  --os-variant debian11 \
-  --initrd-inject ./preseed.cfg \
-  --extra-args="ks=file:/preseed.cfg"
-```
